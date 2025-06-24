@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Feedback</h2>
+        <form  method="get" action="" id="feedbackForm">
+            <input type="text" id="customerName" placeholder="Your Name" required>
+            <input type="email" id="customerEmail" placeholder="Your Email" required>
+            <select id="rating">
+                <option value="0">Your Feedback</option>
+                <option value="5">⭐️⭐️⭐️⭐️⭐️ (Excellent)</option>
+                <option value="4">⭐️⭐️⭐️⭐️ (Good)</option>
+                <option value="3">⭐️⭐️⭐️ (Average)</option>
+                <option value="2">⭐️⭐️ (Poor)</option>
+                <option value="1">⭐️ (Terrible)</option>
+            </select>
+            <textarea id="comments" placeholder="Your Comments" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

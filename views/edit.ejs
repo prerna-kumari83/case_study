@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #719fcc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .edit-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .edit-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            background: #fdfdfd;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #6c63ff;
+            outline: none;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #fdfdfd;
+            transition: border-color 0.3s;
+        }
+
+        input[type="password"]:focus {
+            border-color: #6c63ff;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #6c63ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5848e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-container">
+        <h2>Edit User: <%= user.email %></h2>
+        <form method="POST" action="/user/<%= user.id %>?_method=PATCH">
+            <textarea name="username" required><%= user.username %></textarea>
+            <input type="password" name="password" placeholder="Enter new password" required>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <style>
+        /* Background Styling */
+        body {
+            background: linear-gradient(45deg, #141E30, #243B55);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Edit Form Container */
+        .edit-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 40%;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        textarea, input {
+            width: 80%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: none;
+            display: block;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 60px;
+            resize: vertical;
+        }
+
+        input {
+            height: 35px;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            background: linear-gradient(45deg, #4A00E0, #8E2DE2);
+            color: white;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-container">
+        <h2>Edit User: <%= user.email %></h2>
+        <form method="patch" action="/user/<%= user.id %>?_method=PATCH">
+            <textarea name="username" required><%= user.username %></textarea>
+            <input type="password" name="password" placeholder="Enter new password" required>
+            <button>Edit</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form</title>
+
+</head>
+<body>
+   
+        <h2>you are put to edit the user :<%= user.email %></h2>
+        <form method="post" action= "/user/<%=user.id%>?_method=PATCH">
+            <textarea name="username" ><%= user.username %></textarea>
+            <input type="password" name="password"  placeholder="enter password">
+            <button>Edit</button>
+        </form>
+        
+
+
+    
+</body> -->
+</html>
